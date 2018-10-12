@@ -183,6 +183,10 @@ function isLeapYear(year) {
   return (daysInYear !== countDaysInYear(year));
 }
 
+function totalDaysInMonth(year, month){
+  return calendar_data[year][month - 1]
+}
+
 function countBSDays(date) {
   var dayCount = 0;
   var dateArr = date.split('/').map(function(str) {
@@ -344,3 +348,4 @@ function ad2bs(date) {
 
 exports.bs2ad = bs2ad;
 exports.ad2bs = ad2bs;
+exports.totalDaysInMonth=totalDaysInMonth;
